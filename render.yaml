@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mern-server
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ATLAS_URI
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: NODE_DNS_SERVERS
+        value: 8.8.8.8,1.1.1.1
